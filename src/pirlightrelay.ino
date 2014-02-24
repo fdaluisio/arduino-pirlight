@@ -1,4 +1,4 @@
-#include <math.h>
+
 #define PirPin 2
 
 const int ledPin=13;
@@ -66,7 +66,7 @@ void loop() {
 
 /***************************************************************/
 /*Function: Detect whether anyone moves in it's detecting range*/
-/*Return:-boolean, ture is someone detected.*/
+/*Return:-boolean, true is someone detected.*/
 boolean isPeopleDetected()
 {
 	int sensorValue = digitalRead(PirPin);
@@ -82,6 +82,9 @@ boolean isPeopleDetected()
 	}
 }
 
+/*********************************************************************/
+/*Function: Detect if lighsensor value readed is more than threshold */
+/*Return:-boolean, true if lower than a threshold                    */
 boolean isLightDetected()
 {
 	int sensorValue = analogRead(lightPin);
